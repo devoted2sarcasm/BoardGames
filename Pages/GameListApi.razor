@@ -1,0 +1,12 @@
+@page "/allGamesApi"
+
+<PageTitle>Game List API</PageTitle>
+
+    <div class="container">
+        <div class="row">
+            @foreach (BoardGame boardgame in Games)
+            {
+                <GameCard Game="boardgame" />
+            }
+        </div>
+    </div>

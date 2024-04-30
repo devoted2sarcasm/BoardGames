@@ -1,0 +1,52 @@
+@page "/addGame"
+
+<PageTitle>Add a Board Game</PageTitle>
+<h1>Add a Board Game</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Add Board Game</h4>
+                </div>
+                <div class="card-body">
+                    <form @onsubmit="AddGame">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Game Name" @bind="newGame.Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="minPlayers">Minimum Players</label>
+                            <input type="number" class="form-control" id="minPlayers" placeholder="Enter Minimum Number of Players" @bind="newGame.MinPlayers">
+                        </div>
+                        <div class="form-group">
+                            <label for="maxPlayers">Maximum Players</label>
+                            <input type="number" class="form-control" id="maxPlayers" placeholder="Enter Maximum Number of Players" @bind="newGame.MaxPlayers">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Desccription</label>
+                            <input type="text" class="form-control" id="description" placeholder="Enter a brief description of the game" @bind="newGame.Description">
+                        </div>
+                        <div class="form-group">
+                            <label for="difficulty">Difficulty</label>
+                            <input type="number" class="form-control" id="difficulty" placeholder="Enter Game Difficulty on a scale from 1-10" @bind="newGame.Difficulty">
+                        </div>
+                        <div class="form-group">
+                            <label for="rank">Rank</label>
+                            <input type="number" class="form-control" id="rank" placeholder="Enter Game Rank from BGG" @bind="newGame.Rank">
+                        </div>
+                        <div class="form-group">
+                            <label for="idealPlayerCount">Ideal # Players</label>
+                            <input type="number" class="form-control" id="idealPlayerCount" placeholder="Enter Ideal # of players" @bind="newGame.IdealPlayerCount">
+                        </div>
+                        <div class="form-group">
+                            <label for="playtime">Playtime</label>
+                            <input type="number" class="form-control" id="playtime" placeholder="Enter Average Playtime in # Minutes" @bind="newGame.Playtime">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Game</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

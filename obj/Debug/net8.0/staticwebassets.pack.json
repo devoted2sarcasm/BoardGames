@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\NCMC\\CIS106\\boardgames\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\NCMC\\CIS106\\boardgames\\obj\\Debug\\net8.0\\compressed\\ugmivihlrv.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\NCMC\\CIS106\\boardgames\\obj\\Debug\\net8.0\\scopedcss\\bundle\\boardgames.styles.css",
+      "PackagePath": "staticwebassets\\boardgames.styles.css"
+    },
+    {
+      "Id": "C:\\NCMC\\CIS106\\boardgames\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\NCMC\\CIS106\\boardgames\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\NCMC\\CIS106\\boardgames\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\NCMC\\CIS106\\boardgames\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\NCMC\\CIS106\\boardgames\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\NCMC\\CIS106\\boardgames\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\NCMC\\CIS106\\boardgames\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.boardgames.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.boardgames.props",
+      "PackagePath": "build\\boardgames.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.boardgames.props",
+      "PackagePath": "buildMultiTargeting\\boardgames.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.boardgames.props",
+      "PackagePath": "buildTransitive\\boardgames.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

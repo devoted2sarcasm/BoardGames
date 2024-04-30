@@ -1,0 +1,15 @@
+@if (DisplayFeedbackMessage)
+{
+    <div class="alert alert-success alert-dismissable fade show" role="alert">
+        @FeedbackMessage
+    </div>
+}
+
+<div class="container">
+    <div class="row">
+        @foreach (BoardGame boardgame in Games)
+        {
+            <GameCard Game="boardgame" />
+        }
+    </div>
+</div>

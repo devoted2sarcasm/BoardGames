@@ -1,0 +1,47 @@
+@page "/game-details/{Id:int}"
+
+@if (!IsLoading)
+{
+    @if (game != null)
+    {
+        @if (DisplayFeedbackMessage)
+        {
+            <div class="alert alert-success alert-dismissable fade show" role="alert">
+                @FeedbackMessage
+            </div>
+        }
+
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">@game.Name</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <strong>ID:</strong> @game.Id<br>
+                            <strong>Players:</strong> @game.MinPlayers - @game.MaxPlayers<br>
+                            <strong>Description:</strong> @game.Description<br>
+                            <strong>Difficulty (1-10):</strong> @game.Difficulty<br>
+                            <strong>Rank:</strong> @game.Rank<br>
+                            <strong>Ideal Players:</strong> @game.IdealPlayerCount<br>
+                            <strong>Avg Playtime:</strong> @game.Playtime<br>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary">Edit</button>
+                    <button class="btn btn-danger ml-2" @onclick="DeleteGame">Delete</button>
+                </div>
+            </div>
+        </div>
+    }
+    else if (ErrorOccurred)
+    {
+        <p>@ErrorMessage</p>
+    }
+}
+else 
+{
+    <p>Retrieving Game...</p>
+}

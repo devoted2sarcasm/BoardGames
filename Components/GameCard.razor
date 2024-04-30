@@ -1,0 +1,26 @@
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <div class="card-header">
+            <div class="rod">
+                <div class="col">
+                    @Game.Name
+                </div>
+                <div class="col-auto">
+                    <button @onclick="DeleteGame" class="btn btn-danger">
+                        X
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">
+                    Players: @Game.MinPlayers - @Game.MaxPlayers
+                </h5>
+                <p class="card-text">Description: @Game.Description</p>
+                <p class="card-text">Difficulty: @Game.Difficulty</p>
+                <p class="card-text">Rank: @Game.Rank</p>
+                <p class="card-text">Ideal Players: @Game.IdealPlayerCount</p>
+                <p class="card-text">Avg Playtime: @Game.Playtime</p>
+            </div>
+        </div>
+    </div>
+</div>
