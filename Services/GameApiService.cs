@@ -9,7 +9,7 @@ namespace boardgames.Services
 {
     public class GameApiService : IGameApiService
     {
-        private static readonly string BASE_URL = "https://localhost:5025";
+        private static readonly string BASE_URL = "http://localhost:5025";
 
         private static readonly HttpClient _httpClient = new HttpClient();
 
@@ -23,6 +23,7 @@ namespace boardgames.Services
                 string responseBody = await response.Content.ReadAsStringAsync();
 
                 Console.WriteLine("Retrieved games.");
+                Console.WriteLine("Response from API: ", responseBody);
 
                 return JsonSerializer.Deserialize<List<BoardGame>>(responseBody);
             }

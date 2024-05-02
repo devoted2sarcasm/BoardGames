@@ -5,11 +5,6 @@
                 <div class="col">
                     @Game.Name
                 </div>
-                <div class="col-auto">
-                    <button @onclick="PlayGameById">
-                        Play
-                    </button>
-                </div>
             </div>
             <div class="card-body">
                 <h5 class="card-title">
@@ -20,6 +15,11 @@
                 <p class="card-text">Rank: @Game.Rank</p>
                 <p class="card-text">Ideal Players: @Game.IdealPlayerCount</p>
                 <p class="card-text">Avg Playtime: @Game.Playtime</p>
+            </div>
+            <div class="col-auto">
+                    <button @onclick="PlayGameById">
+                        Play this Game
+                    </button>
             </div>
         </div>
     </div>
