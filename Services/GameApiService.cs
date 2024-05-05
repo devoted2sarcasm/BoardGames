@@ -4,6 +4,8 @@ using boardgames.Models.Requests;
 // using boardgames.Exceptions;
 using boardgames.Models;
 using System.Net.Http.Json;
+using System.Collections.Generic;
+using boardgames.Models.Responses;
 
 namespace boardgames.Services
 {
@@ -13,7 +15,7 @@ namespace boardgames.Services
 
         private static readonly HttpClient _httpClient = new HttpClient();
 
-        public async Task<List<BoardGame>> GetGames() 
+        public async Task<List<BoardGameResponse>> GetGames() 
         {
             Console.WriteLine("Getting games from API");
             HttpResponseMessage response = await _httpClient.GetAsync($"{BASE_URL}/allGames");
@@ -25,17 +27,17 @@ namespace boardgames.Services
                 Console.WriteLine("Retrieved games.");
                 Console.WriteLine("Response from API: ", responseBody);
 
-                return JsonSerializer.Deserialize<List<BoardGame>>(responseBody);
+                return JsonSerializer.Deserialize<List<BoardGameResponse>>(responseBody);
             }
             else
             {
                 Console.WriteLine("Failed to retrieve games.");
 
-                return new List<BoardGame>();
+                return new List<BoardGameResponse>();
             }
         }
 
-        public async Task<BoardGame> GetGame(int Id)
+        public async Task<BoardGameResponse> GetGame(int Id)
         {
             HttpResponseMessage response = await _httpClient.GetAsync($"{BASE_URL}/games/{Id}");
 
@@ -43,17 +45,17 @@ namespace boardgames.Services
             {
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                return JsonSerializer.Deserialize<BoardGame>(responseBody);
+                return JsonSerializer.Deserialize<BoardGameResponse>(responseBody);
             }
             else
             {
-                return new BoardGame();
+                return new BoardGameResponse();
             }
         }
 
-        public async Task<IEnumerable<BoardGame>> GetAllGames()
+        public async Task<IEnumerable<BoardGameResponse>> GetAllGames()
         {
-            return await _httpClient.GetFromJsonAsync<IEnumerable<BoardGame>>($"{BASE_URL}/allGames");
+            return await _httpClient.GetFromJsonAsync<IEnumerable<BoardGameResponse>>($"{BASE_URL}/allGames");
         }
 
         public async Task<GamePlayed> GamePlayed(GamePlayed gameplayed)
@@ -72,7 +74,7 @@ namespace boardgames.Services
             }
         }
 
-        public async Task<BoardGame> AddGame(BoardGame game)
+        public async Task<BoardGameResponse> AddGame(BoardGame game)
         {
             HttpResponseMessage response = await _httpClient.PostAsJsonAsync($"{BASE_URL}/games", game);
 
@@ -80,7 +82,7 @@ namespace boardgames.Services
             {
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                return JsonSerializer.Deserialize<BoardGame>(responseBody);
+                return JsonSerializer.Deserialize<BoardGameResponse>(responseBody);
             }
             else
             {

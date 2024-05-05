@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using boardgames.Services;
 using Microsoft.AspNetCore.Components;
 using System.ComponentModel;
+using boardgames.Models.Responses;
 
 namespace boardgames.Pages;
 
@@ -18,7 +19,7 @@ public partial class GameListApi : ComponentBase
     [Inject]
     private IGameApiService BGameService { get; set; }
 
-    private List<BoardGame> Games { get; set; } = new List<BoardGame>();
+    private List<BoardGameResponse> Games { get; set; } = new List<BoardGameResponse>();
 
     private bool DisplayFeedbackMessage { get; set; }
 

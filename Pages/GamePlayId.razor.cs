@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using boardgames.Services;
 using Microsoft.AspNetCore.Components;
+using boardgames.Models.Responses;
 
 namespace boardgames.Pages;
 
@@ -17,9 +18,15 @@ public partial class GamePlayId : ComponentBase
     [Parameter]
     public int Id { get; set; }
 
-    private BoardGame Game { get; set; }
+    private BoardGameResponse Game { get; set; }
 
     private GamePlayed GamePlayed { get; set; } = new GamePlayed();
+
+    // method to fetch the name of the game being played for display in the title
+    private string GameName()
+    {
+        return this.Game.Name;
+    }
 
     protected override async Task OnInitializedAsync()
     {

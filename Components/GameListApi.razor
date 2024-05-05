@@ -1,3 +1,4 @@
+@using boardgames.Models.Responses
 @if (DisplayFeedbackMessage)
 {
     <div class="alert alert-success alert-dismissable fade show" role="alert">
@@ -7,9 +8,9 @@
 
 <div class="container">
     <div class="row">
-        @foreach (BoardGame boardgame in Games)
+        @foreach (BoardGameResponse boardgameresponse in Games)
         {
-            <GameCardApi Game="boardgame" />
+            <GameCardApi Game="boardgameresponse" />
         }
     </div>
 </div>

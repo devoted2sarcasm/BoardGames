@@ -1,18 +1,19 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using boardgames.Models;
+using boardgames.Models.Responses;
 
 
 namespace boardgames.Services
 {
     public interface IGameApiService
     {
-        Task<List<BoardGame>> GetGames();
+        Task<List<BoardGameResponse>> GetGames();
 
-        Task<BoardGame> GetGame(int Id);
+        Task<BoardGameResponse> GetGame(int Id);
 
         Task<GamePlayed> GamePlayed(GamePlayed gamePlayed);
 
-        Task<BoardGame> AddGame(BoardGame game);
+        Task<BoardGameResponse> AddGame(BoardGame game);
     }
 }

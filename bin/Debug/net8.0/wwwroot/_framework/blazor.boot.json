@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "boardgames",
   "resources": {
-    "hash": "sha256-tHJP5j8USgLNN7cNWLasSF4uXOg5WRhOefygwJ374GE=",
+    "hash": "sha256-aBGfLCzJh//yHzDvD6HKyhDLjLLsFa4HrRaND1WoxkY=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.dv2qc1hp6c.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -229,10 +229,10 @@
       "mscorlib.wasm": "sha256-OH3kXneWqQMz6CUSo6POZqIeMqn9+5RR+IgHn5TnIwA=",
       "netstandard.wasm": "sha256-ZOswxXEbR2TmqjpbaBEdgr85Bv1NC4GwOwoJ+oxXM3M=",
       "System.Private.CoreLib.wasm": "sha256-I2w0iHf5nvSQyF1YE1VbgdTzmmz6a4OE6J7vo5wFa/4=",
-      "boardgames.wasm": "sha256-e/ADbucf1LKxItpj+J/snzata4wgRRSyp7qsf1raSbI="
+      "boardgames.wasm": "sha256-pZ9NmbSpsbHMXnjheyIbiKr0KrtnBtzolIJw2yJ/KQ8="
     },
     "pdb": {
-      "boardgames.pdb": "sha256-bb/+Xv6T82PA0rlVNZDZcn4NFJJYmGIx+xmaoDbWyHE="
+      "boardgames.pdb": "sha256-xk8S/g7Aw/3T+QvP/LxbugUxRWja+t/RDRynrqqz4iw="
     },
     "satelliteResources": {
       "cs": {
